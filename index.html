@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Tejas Pawar — Backend Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Roboto+Mono:wght@700&family=Manrope:wght@800&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --bg: #080c10;
@@ -108,7 +108,8 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 4rem;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 2rem;
     width: 100%;
     max-width: 1200px;
   }
@@ -247,12 +248,19 @@
   .hero-tag::before { content: '▶'; font-size: 0.6rem; }
 
   .hero-name {
-    font-family: var(--font-display);
+    font-family: 'Syne', sans-serif;
     font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 800;
     line-height: 1;
     margin-bottom: 0.5rem;
     animation: fadeUp 0.6s 0.1s ease both;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.02em;
+  }
+  .hero-name .j-letter {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    color: var(--text) !important;
   }
   .hero-name span { color: var(--accent); }
 
@@ -768,6 +776,9 @@
     transition: all 0.15s ease;
     mix-blend-mode: screen;
   }
+  @media (hover: none), (max-width: 768px) {
+    .cursor-dot, .cursor-ring { display: none !important; }
+  }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -803,7 +814,7 @@
   <div class="hero-inner">
   <div class="hero-content">
     <div class="hero-tag">Backend Developer · Pune, India</div>
-    <h1 class="hero-name">Tejas<br/><span>Pawar.</span></h1>
+    <h1 class="hero-name">Te<span class="j-letter">j</span>as<br/><span>Pawar.</span></h1>
     <p class="hero-role">Building <strong>Scalable Systems</strong> with Java & Spring</p>
     <p class="hero-bio">
       I design and build robust backend systems that power real-world applications. From RESTful APIs to database-driven enterprise solutions, I write clean, maintainable code using Java, Spring Boot, and modern cloud tools. Passionate about solving performance problems and delivering reliable software.
@@ -919,7 +930,9 @@
       <!-- Project 1 -->
       <div class="project-card reveal">
         <div class="project-header">
-          <div class="project-icon">🏫</div>
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <div class="project-links">
             <a href="https://github.com/dev-tejaspawar" target="_blank" class="project-link">GitHub →</a>
           </div>
@@ -962,7 +975,9 @@
       <!-- Project 2 -->
       <div class="project-card reveal">
         <div class="project-header">
-          <div class="project-icon">👥</div>
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <div class="project-links">
             <a href="https://github.com/dev-tejaspawar" target="_blank" class="project-link">GitHub →</a>
           </div>
@@ -1005,7 +1020,9 @@
       <!-- Project 3: AIMS -->
       <div class="project-card reveal">
         <div class="project-header">
-          <div class="project-icon">📚</div>
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
           <div class="project-links">
             <a href="https://github.com/dev-tejaspawar" target="_blank" class="project-link">GitHub →</a>
           </div>
@@ -1058,14 +1075,18 @@
     </div>
     <div class="certs-grid">
       <div class="cert-card reveal">
-        <div class="cert-badge">☕</div>
+        <div class="cert-badge">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent2)"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
         <div>
           <div class="cert-name">Java (Basic) Certificate</div>
           <div class="cert-issuer">HackerRank · Verified</div>
         </div>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge">🎓</div>
+        <div class="cert-badge">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent2)"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
         <div>
           <div class="cert-name">PG Diploma in Advanced Computing</div>
           <div class="cert-issuer">C-DAC · Government of India</div>
@@ -1083,19 +1104,19 @@
       <h2 class="section-title">Tech <span>Insights</span></h2>
     </div>
     <div class="blog-grid">
-      <div class="blog-card reveal">
+      <div class="blog-card reveal" onclick="openBlog('blog1')" style="cursor:pointer">
         <span class="blog-tag">Spring Boot</span>
         <h3 class="blog-title">Why I Chose Spring Boot Over Plain Servlets</h3>
         <p class="blog-excerpt">A practical comparison of building REST APIs with raw Servlets vs Spring Boot — auto-configuration, reduced boilerplate, and production-ready features out of the box.</p>
         <span class="blog-read">Read more →</span>
       </div>
-      <div class="blog-card reveal">
+      <div class="blog-card reveal" onclick="openBlog('blog2')" style="cursor:pointer">
         <span class="blog-tag">Database</span>
         <h3 class="blog-title">Hibernate vs JDBC: When to Use What</h3>
         <p class="blog-excerpt">ORM vs raw SQL — trade-offs in performance, complexity, and use-cases. Understanding when Hibernate shines and when plain JDBC is the right tool.</p>
         <span class="blog-read">Read more →</span>
       </div>
-      <div class="blog-card reveal">
+      <div class="blog-card reveal" onclick="openBlog('blog3')" style="cursor:pointer">
         <span class="blog-tag">Backend</span>
         <h3 class="blog-title">Designing Clean REST APIs with Spring MVC</h3>
         <p class="blog-excerpt">Best practices for URL structure, HTTP methods, error handling, and response formats when building REST APIs for enterprise Java applications.</p>
@@ -1165,7 +1186,7 @@
 <!-- FOOTER -->
 <footer>
   <span>Tejas Pawar</span>
-  <span>Built with <span style="color:var(--accent2)">♥</span> · Pune, India · 2024</span>
+  <span>Built with <span style="color:var(--accent2)">♥</span> · Pune, India · 2026</span>
   <span>tejaspawar699@gmail.com</span>
 </footer>
 
@@ -1205,5 +1226,169 @@
     });
   });
 </script>
+
+<!-- BLOG OVERLAY -->
+<div id="blog-overlay" style="display:none;position:fixed;inset:0;z-index:500;background:var(--bg);overflow-y:auto;">
+  <div style="max-width:760px;margin:0 auto;padding:6rem 2rem 4rem;">
+    <button onclick="closeBlog()" style="display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:1px solid var(--border);color:var(--accent);font-family:var(--font-mono);font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:2px;cursor:pointer;margin-bottom:3rem;letter-spacing:0.08em;">← Back to Portfolio</button>
+    <div id="blog-content"></div>
+  </div>
+</div>
+
+<style>
+  .blog-article h1 { font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:1rem; }
+  .blog-article .meta { font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);letter-spacing:0.1em;margin-bottom:2.5rem;display:flex;gap:1.5rem;flex-wrap:wrap; }
+  .blog-article .meta span { color:var(--accent); }
+  .blog-article h2 { font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin:2.5rem 0 1rem;color:var(--accent); }
+  .blog-article p { font-size:1rem;color:#a8bfd4;line-height:1.85;margin-bottom:1.2rem; }
+  .blog-article pre { background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0; }
+  .blog-article code { font-family:var(--font-mono);font-size:0.82rem;color:var(--accent); }
+  .blog-article .inline-code { background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.15);padding:0.1rem 0.4rem;border-radius:2px;font-family:var(--font-mono);font-size:0.82rem;color:var(--accent); }
+  .blog-article ul { padding-left:1.5rem;color:#a8bfd4;line-height:1.85;margin-bottom:1.2rem; }
+  .blog-article ul li { margin-bottom:0.4rem; }
+  .blog-article .highlight-box { background:var(--bg3);border-left:3px solid var(--accent);padding:1rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0; }
+  .blog-article .highlight-box p { margin:0;color:var(--text); }
+</style>
+
+<script>
+const blogs = {
+  blog1: `<div class="blog-article">
+    <div class="meta"><span>Spring Boot</span> &nbsp;·&nbsp; May 2025 &nbsp;·&nbsp; 6 min read</div>
+    <h1>Why I Chose Spring Boot Over Plain Servlets</h1>
+    <p>When I started building backend systems in Java, I began with raw Servlets and JSP — the traditional way. It worked, but the amount of boilerplate code was exhausting. Every project needed the same repetitive setup: web.xml configurations, manual dependency management, and writing the same utility classes from scratch.</p>
+    <p>Then I switched to Spring Boot, and everything changed.</p>
+    <h2>The Boilerplate Problem</h2>
+    <p>With plain Servlets, creating a simple REST endpoint required mapping the URL in web.xml, writing a Servlet class, handling HttpServletRequest and HttpServletResponse manually, and parsing JSON yourself. Here's what that looks like:</p>
+    <pre><code>@WebServlet("/api/users")
+public class UserServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest req,
+                         HttpServletResponse res) throws IOException {
+        res.setContentType("application/json");
+        // manual JSON building...
+        res.getWriter().write("{"users": [...]}");
+    }
+}</code></pre>
+    <p>With Spring Boot, the same endpoint is just:</p>
+    <pre><code>@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    @GetMapping
+    public List&lt;User&gt; getUsers() {
+        return userService.findAll();
+    }
+}</code></pre>
+    <h2>Auto-Configuration: The Real Game Changer</h2>
+    <p>Spring Boot's auto-configuration detects what's on your classpath and configures beans automatically. Add <span class="inline-code">spring-boot-starter-data-jpa</span> and it sets up Hibernate, a DataSource, and transaction management — all without a single XML file.</p>
+    <div class="highlight-box"><p>Spring Boot follows the principle of <strong>convention over configuration</strong> — sensible defaults so you only configure what's different.</p></div>
+    <h2>Production-Ready Out of the Box</h2>
+    <p>Spring Boot Actuator gives you health checks, metrics, and monitoring endpoints with zero extra code. In a Servlet project, you'd build all of this yourself.</p>
+    <h2>When Would I Still Use Plain Servlets?</h2>
+    <ul>
+      <li>Extremely lightweight microservices where startup time matters</li>
+      <li>Learning environments — understanding Servlets is still valuable foundation</li>
+      <li>Legacy systems that can't be migrated</li>
+    </ul>
+    <p>For any real production project today, Spring Boot is the clear choice. It handles the infrastructure so you can focus on business logic.</p>
+  </div>`,
+
+  blog2: `<div class="blog-article">
+    <div class="meta"><span>Database</span> &nbsp;·&nbsp; April 2025 &nbsp;·&nbsp; 7 min read</div>
+    <h1>Hibernate vs JDBC: When to Use What</h1>
+    <p>One of the most common questions when building Java backend systems is: should I use Hibernate (ORM) or plain JDBC? I've used both extensively in my projects — Teacher Management System used Hibernate, while parts of Employee Management System used raw JDBC — and here's what I learned.</p>
+    <h2>What is JDBC?</h2>
+    <p>JDBC (Java Database Connectivity) is the low-level API for interacting with databases. You write raw SQL, manage connections, and handle result sets manually.</p>
+    <pre><code>Connection conn = DriverManager.getConnection(url, user, pass);
+PreparedStatement ps = conn.prepareStatement(
+    "SELECT * FROM employees WHERE dept_id = ?");
+ps.setInt(1, deptId);
+ResultSet rs = ps.executeQuery();
+while (rs.next()) {
+    Employee e = new Employee();
+    e.setId(rs.getInt("id"));
+    e.setName(rs.getString("name"));
+    // ... map every column manually
+}</code></pre>
+    <h2>What is Hibernate?</h2>
+    <p>Hibernate is an ORM (Object Relational Mapper) — it maps Java objects to database tables automatically. You work with objects, and Hibernate generates the SQL for you.</p>
+    <pre><code>// Hibernate - same query in one line
+List&lt;Employee&gt; employees = session
+    .createQuery("FROM Employee WHERE dept.id = :id", Employee.class)
+    .setParameter("id", deptId)
+    .list();</code></pre>
+    <h2>Performance: The Real Trade-off</h2>
+    <div class="highlight-box"><p>Hibernate generates SQL automatically — but that SQL isn't always optimal. For complex queries with multiple joins, raw JDBC with hand-tuned SQL will almost always outperform Hibernate.</p></div>
+    <p>However, for standard CRUD operations, Hibernate's performance is more than acceptable, and the development speed gain is massive.</p>
+    <h2>My Decision Framework</h2>
+    <ul>
+      <li><strong>Use Hibernate</strong> when you have complex domain models, need rapid development, or want database portability</li>
+      <li><strong>Use JDBC</strong> when you need maximum performance, are writing complex reporting queries, or working with stored procedures</li>
+      <li><strong>Use both</strong> — Hibernate for most operations, JDBC for performance-critical queries</li>
+    </ul>
+    <p>In my Employee Management System, I used Hibernate for employee CRUD and raw JDBC for payroll summary reports that needed precise SQL control. The hybrid approach gave the best of both worlds.</p>
+  </div>`,
+
+  blog3: `<div class="blog-article">
+    <div class="meta"><span>Backend</span> &nbsp;·&nbsp; March 2025 &nbsp;·&nbsp; 8 min read</div>
+    <h1>Designing Clean REST APIs with Spring MVC</h1>
+    <p>A well-designed REST API is a joy to consume. A poorly designed one causes bugs, confusion, and late-night debugging sessions. After building multiple APIs — including RESTful services for Teacher Management System, Employee Management System, and AIMS — I've developed a set of principles I follow every time.</p>
+    <h2>1. Resource-Oriented URLs</h2>
+    <p>URLs should represent resources (nouns), not actions (verbs). The HTTP method describes the action.</p>
+    <pre><code>// Bad
+GET /getTeachers
+POST /createTeacher
+DELETE /deleteTeacher?id=5
+
+// Good
+GET    /api/teachers
+POST   /api/teachers
+DELETE /api/teachers/{id}</code></pre>
+    <h2>2. Use HTTP Status Codes Correctly</h2>
+    <p>Don't return 200 OK for everything and put the error in the body. Use the right status codes:</p>
+    <ul>
+      <li><span class="inline-code">200 OK</span> — successful GET, PUT</li>
+      <li><span class="inline-code">201 Created</span> — successful POST</li>
+      <li><span class="inline-code">204 No Content</span> — successful DELETE</li>
+      <li><span class="inline-code">400 Bad Request</span> — invalid input</li>
+      <li><span class="inline-code">404 Not Found</span> — resource doesn't exist</li>
+      <li><span class="inline-code">500 Internal Server Error</span> — unexpected server failure</li>
+    </ul>
+    <h2>3. Consistent Error Responses</h2>
+    <p>Always return errors in a consistent structure so frontend developers know exactly what to expect:</p>
+    <pre><code>{
+  "status": 404,
+  "error": "Not Found",
+  "message": "Teacher with id 42 not found",
+  "timestamp": "2025-03-15T10:30:00Z"
+}</code></pre>
+    <h2>4. API Versioning</h2>
+    <p>Always version your APIs from day one. When you need to make breaking changes, you won't break existing clients:</p>
+    <pre><code>GET /api/v1/teachers   // original
+GET /api/v2/teachers   // new version with different response shape</code></pre>
+    <div class="highlight-box"><p>In Spring Boot, use <span class="inline-code">@RequestMapping("/api/v1")</span> at the controller level to version your entire API cleanly.</p></div>
+    <h2>5. Request Validation</h2>
+    <p>Use Spring's <span class="inline-code">@Valid</span> and Bean Validation annotations to validate inputs at the controller level — never trust client data.</p>
+    <pre><code>@PostMapping("/teachers")
+public ResponseEntity&lt;Teacher&gt; create(@Valid @RequestBody TeacherDTO dto) {
+    return ResponseEntity.status(201).body(service.create(dto));
+}</code></pre>
+    <p>Following these principles makes your API predictable, easy to test, and a pleasure for other developers — or your future self — to work with.</p>
+  </div>`
+};
+
+function openBlog(id) {
+  document.getElementById('blog-content').innerHTML = blogs[id];
+  const overlay = document.getElementById('blog-overlay');
+  overlay.style.display = 'block';
+  overlay.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+function closeBlog() {
+  document.getElementById('blog-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+// Close on ESC
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeBlog(); });
+</script>
+
 </body>
 </html>
