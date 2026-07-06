@@ -826,7 +826,7 @@
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-num">3+</div>
+        <div class="stat-num">4+</div>
         <div class="stat-label">Major Projects</div>
       </div>
       <div>
@@ -940,7 +940,7 @@
         </div>
         <div class="project-body">
           <div class="project-subtitle">// Enterprise System</div>
-          <h3 class="project-title">Teacher Management System</h3>
+          <h3 class="project-title">TeacherRegistry — Teacher Management System</h3>
           <p class="project-desc">
             A full-featured web application to manage teacher records, subjects, schedules, and performance data for educational institutions. Eliminates manual record-keeping with a centralized, secure database-driven platform.
           </p>
@@ -985,7 +985,7 @@
         </div>
         <div class="project-body">
           <div class="project-subtitle">// HR Tech Solution</div>
-          <h3 class="project-title">Employee Management System</h3>
+          <h3 class="project-title">KarmChaari — Employee Management System</h3>
           <p class="project-desc">
             End-to-end HR backend system handling employee onboarding, payroll data, department mapping, and leave management. Built for scale with clean REST APIs consumed by any frontend or mobile client.
           </p>
@@ -1018,47 +1018,94 @@
         </div>
       </div>
 
-      <!-- Project 3: AIMS -->
+      <!-- Project 3: AI Dictionary -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
           </div>
           <div class="project-links">
             <a href="https://github.com/dev-tejaspawar" target="_blank" class="project-link">GitHub →</a>
           </div>
         </div>
         <div class="project-body">
-          <div class="project-subtitle">// Microservices · Enterprise</div>
-          <h3 class="project-title">Academic Inventory Management System (AIMS)</h3>
+          <div class="project-subtitle">// AI · Multilingual · REST API</div>
+          <h3 class="project-title">AI-Powered Multilingual Dictionary</h3>
           <p class="project-desc">
-            Microservices-based inventory and procurement system for Barnes &amp; Noble Education. Streamlined the book adoption process for 200+ universities, enabling on-time book delivery and pickup for students and faculty.
+            Secure RESTful backend using Spring Boot and Google Gemini API that generates AI-powered meanings, translations, pronunciations, synonyms, antonyms, and example sentences — including Hinglish output via prompt engineering.
           </p>
           <div class="project-detail">
             <div class="detail-item">
-              <div class="detail-label">Scale</div>
-              <div class="detail-value">200+ universities served</div>
+              <div class="detail-label">AI Integration</div>
+              <div class="detail-value">Google Gemini API + JSON parsing</div>
             </div>
             <div class="detail-item">
-              <div class="detail-label">Architecture</div>
-              <div class="detail-value">Microservices (Spring Boot)</div>
+              <div class="detail-label">Auth</div>
+              <div class="detail-value">JWT + BCrypt + stateless sessions</div>
             </div>
             <div class="detail-item">
-              <div class="detail-label">APIs Built</div>
-              <div class="detail-value">Professor selections, Student cart, Orders</div>
+              <div class="detail-label">Performance</div>
+              <div class="detail-value">Per-user search history cache</div>
             </div>
             <div class="detail-item">
-              <div class="detail-label">Impact</div>
-              <div class="detail-value">Significantly improved book availability</div>
+              <div class="detail-label">Entities</div>
+              <div class="detail-value">User, SearchHistory (JPA/Hibernate)</div>
             </div>
           </div>
           <div class="project-stack">
             <span class="stack-tag">Java</span>
             <span class="stack-tag">Spring Boot</span>
-            <span class="stack-tag">Microservices</span>
-            <span class="stack-tag">REST API</span>
+            <span class="stack-tag">Spring Security</span>
+            <span class="stack-tag">JWT</span>
+            <span class="stack-tag">Gemini API</span>
+            <span class="stack-tag">JPA/Hibernate</span>
+            <span class="stack-tag">H2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: AI Resume Builder -->
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/dev-tejaspawar" target="_blank" class="project-link">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-subtitle">// AI · Resume · Full Stack Backend</div>
+          <h3 class="project-title">AI-Powered Resume Builder</h3>
+          <p class="project-desc">
+            RESTful backend (Spring Boot 3, Java 17) powering an AI-driven resume builder — users create, save, retrieve and delete resumes via secure APIs. Google Gemini parses natural language input into structured resume data via a custom prompt engineering layer.
+          </p>
+          <div class="project-detail">
+            <div class="detail-item">
+              <div class="detail-label">AI Integration</div>
+              <div class="detail-value">Gemini API + prompt engineering</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Auth</div>
+              <div class="detail-value">JWT + BCrypt + stateless Spring Security</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Storage</div>
+              <div class="detail-value">MySQL — user-specific resume management</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Design</div>
+              <div class="detail-value">DTO-based layers + CORS config</div>
+            </div>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">Java 17</span>
+            <span class="stack-tag">Spring Boot 3</span>
+            <span class="stack-tag">Spring Security</span>
+            <span class="stack-tag">JWT</span>
+            <span class="stack-tag">Gemini API</span>
             <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">JPA</span>
           </div>
         </div>
       </div>
